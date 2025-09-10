@@ -1,4 +1,4 @@
-# ft_printf
+# ft_printf GPT-5-Pro version 
 
 Minimal `printf` reimplementation producing a static library `libftprintf.a`.
 
