@@ -1,29 +1,29 @@
-tmp/
-
-# Mac OS
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# VSCode
-.vscode/
-*.code-workspace
-
-# C/C++ compiled files
+# Object files
 *.o
-*.obj
-*.exe
-*.out
-*.app
-*.dll
+obj/
+
+# Libraries
+*.a
 *.so
 *.dylib
-*.a
-*.lib
+
+# Executables
+tests/runner
+samples/basic
+samples/edge
+
+# Coverage files
+*.gcov
+*.gcda
+*.gcno
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
 
 # Debug files
 *.dSYM/
@@ -31,31 +31,6 @@ Thumbs.db
 *.idb
 *.pdb
 
-# Core dumps
-core.*
-
 # Temporary files
-*~
 *.tmp
-*.temp
-*.swp
-*.swo
-
-# Build directories
-build/
-bin/
-obj/
-Debug/
-Release/
-x64/
-x86/
-
-# IDE files
-*.user
-*.ncb
-*.suo
-*.vcxproj.user
-*.vcproj.user
-
-# Logs
-*.log
+*.bak
