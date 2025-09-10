@@ -17,6 +17,26 @@ make
 
 This creates `libftprintf.a` at the repository root.
 
+## How to test and get coverage
+
+```bash
+make test      # builds and runs tests
+make coverage  # enforces 100% line coverage with gcov
+```
+
+Notes:
+- Coverage uses gcc/gcov; the Makefile cleans stale gcov artifacts and enforces 100% by scanning for unexecuted lines.
+
+## Sample programs
+
+Build and run examples:
+
+```bash
+make samples
+./samples/basic
+./samples/edge
+```
+
 ## Files layout
 
 - `ft_printf.h`: public API and prototypes.

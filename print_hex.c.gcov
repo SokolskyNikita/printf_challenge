@@ -1,0 +1,30 @@
+        -:    0:Source:src/print_hex.c
+        -:    1:/* ************************************************************************** */
+        -:    2:/*                                                                            */
+        -:    3:/*                                                        :::      ::::::::   */
+        -:    4:/*   print_hex.c                                        :+:      :+:    :+:   */
+        -:    5:/*                                                    +:+ +:+         +:+     */
+        -:    6:/*   By: ai <ai@student.42>                          +#+  +:+       +#+        */
+        -:    7:/*                                                +#+#+#+#+#+   +#+           */
+        -:    8:/*   Created: 2025/09/10 00:00:00 by ai                #+#    #+#             */
+        -:    9:/*   Updated: 2025/09/10 00:00:00 by ai               ###   ########.fr       */
+        -:   10:/*                                                                            */
+        -:   11:/* ************************************************************************** */
+        -:   12:
+        -:   13:#include "ft_printf.h"
+        -:   14:
+function ft_print_hex called 2 returned 100% blocks executed 100%
+        2:   15:int	ft_print_hex(unsigned int n, int uppercase)
+        -:   16:{
+        -:   17:	const char	*base;
+        -:   18:
+        2:   19:	if (uppercase)
+branch  0 taken 50% (fallthrough)
+branch  1 taken 50%
+        1:   20:		base = HEX_UPPER;
+        -:   21:	else
+        1:   22:		base = HEX_LOWER;
+        2:   23:	return (ft_put_unbr_base((unsigned long long)n, base));
+call    0 returned 100%
+        -:   24:}
+        -:   25:
