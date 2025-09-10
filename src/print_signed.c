@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   print_signed.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ai <ai@student.42>                          +#+  +:+       +#+        */
+/*   By: ai <ai@student.42>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 00:00:00 by ai                #+#    #+#             */
 /*   Updated: 2025/09/10 00:00:00 by ai               ###   ########.fr       */
@@ -41,4 +41,3 @@ int	ft_print_signed(int n)
 	count += ft_putnbr_rec(ln);
 	return (count);
 }
-

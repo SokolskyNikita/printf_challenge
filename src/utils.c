@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ai <ai@student.42>                          +#+  +:+       +#+        */
+/*   By: ai <ai@student.42>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 00:00:00 by ai                #+#    #+#             */
 /*   Updated: 2025/09/10 00:00:00 by ai               ###   ########.fr       */
@@ -23,4 +23,3 @@ size_t	ft_strlen(const char *s)
 		len++;
 	return (len);
 }
-

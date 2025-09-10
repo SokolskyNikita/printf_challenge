@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   print_base.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ai <ai@student.42>                          +#+  +:+       +#+        */
+/*   By: ai <ai@student.42>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 00:00:00 by ai                #+#    #+#             */
 /*   Updated: 2025/09/10 00:00:00 by ai               ###   ########.fr       */
@@ -43,7 +43,7 @@ static int	ft_put_unbr_base_rec(
 	const char *base,
 	unsigned int blen)
 {
-	int	count;
+	int		count;
 	char	c;
 
 	count = 0;
@@ -63,4 +63,3 @@ int	ft_put_unbr_base(unsigned long long n, const char *base)
 	blen = (unsigned int)ft_strlen(base);
 	return (ft_put_unbr_base_rec(n, base, blen));
 }
-
