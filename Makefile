@@ -38,4 +38,9 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+test: $(NAME)
+	$(CC) $(CFLAGS) -coverage test_main.c -L. -lftprintf -o test_runner
+	./test_runner
+	gcov $(SRCS)
+
+.PHONY: all clean fclean re test
