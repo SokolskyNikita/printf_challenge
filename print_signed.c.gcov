@@ -1,0 +1,55 @@
+        -:    0:Source:src/print_signed.c
+        -:    1:/* ************************************************************************** */
+        -:    2:/*                                                                            */
+        -:    3:/*                                                        :::      ::::::::   */
+        -:    4:/*   print_signed.c                                     :+:      :+:    :+:   */
+        -:    5:/*                                                    +:+ +:+         +:+     */
+        -:    6:/*   By: ai <ai@student.42>                          +#+  +:+       +#+        */
+        -:    7:/*                                                +#+#+#+#+#+   +#+           */
+        -:    8:/*   Created: 2025/09/10 00:00:00 by ai                #+#    #+#             */
+        -:    9:/*   Updated: 2025/09/10 00:00:00 by ai               ###   ########.fr       */
+        -:   10:/*                                                                            */
+        -:   11:/* ************************************************************************** */
+        -:   12:
+        -:   13:#include "ft_printf.h"
+        -:   14:
+function ft_putnbr_rec called 13 returned 100% blocks executed 100%
+       13:   15:static int	ft_putnbr_rec(long n)
+        -:   16:{
+        -:   17:	char	c;
+        -:   18:	int		count;
+        -:   19:
+       13:   20:	count = 0;
+       13:   21:	if (n >= 10)
+branch  0 taken 69% (fallthrough)
+branch  1 taken 31%
+        9:   22:		count += ft_putnbr_rec(n / 10);
+call    0 returned 100%
+       13:   23:	c = (char)('0' + (n % 10));
+       13:   24:	write(1, &c, 1);
+call    0 returned 100%
+       13:   25:	return (count + 1);
+        -:   26:}
+        -:   27:
+function ft_print_signed called 4 returned 100% blocks executed 100%
+        4:   28:int	ft_print_signed(int n)
+        -:   29:{
+        -:   30:	long	ln;
+        -:   31:	int		count;
+        -:   32:
+        4:   33:	ln = (long)n;
+        4:   34:	count = 0;
+        4:   35:	if (ln < 0)
+branch  0 taken 50% (fallthrough)
+branch  1 taken 50%
+        -:   36:	{
+        2:   37:		write(1, "-", 1);
+call    0 returned 100%
+        2:   38:		count++;
+        2:   39:		ln = -ln;
+        -:   40:	}
+        4:   41:	count += ft_putnbr_rec(ln);
+call    0 returned 100%
+        4:   42:	return (count);
+        -:   43:}
+        -:   44:
